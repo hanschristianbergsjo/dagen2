@@ -5,7 +5,7 @@ from pathlib import Path
 import os
 import tempfile
 
-from .dagen_video_reels import (
+from .dagen_video_simple import (
     fetch_article_text,
     summarise_text,
     generate_audio_elevenlabs,
