@@ -1,0 +1,14 @@
+# Render Blueprint for Dagen Reels
+# See https://render.com/docs/blueprint-spec for details
+services:
+  - type: web
+    name: dagen-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+  - type: static
+    name: dagen-frontend
+    rootDir: frontend
+    buildCommand: ""
+    staticPublishPath: "."
